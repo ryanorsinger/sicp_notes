@@ -5,3 +5,5 @@
 - brew install rlwrap
 - setup an alias for `rlwrap mit-scheme`, see https://rayhightower.com/blog/2015/03/19/using-rlwrap-with-mit-scheme-repl/
 
+## Exercise Solutions for Reference
+http://community.schemewiki.org/?SICP-Solutions

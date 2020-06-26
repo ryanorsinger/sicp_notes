@@ -26,7 +26,6 @@
     (- x)
     x))
 
-
 (define 
     (between-five-and-ten x) 
         (and (> x 5) (< x 10)))
