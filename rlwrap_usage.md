@@ -1,4 +1,19 @@
+## 
 
+Once installed, rlwrap scheme will give you persistent history, paren matching, and tab completion. I typically use rlwrap with the following arguments:
+
+-r Put all words seen on in- and output on the completion list.
+
+-c Complete filenames
+
+-f Specify a list of words to use for tab completion. I'm using an abridged list of bindings from the MIT Scheme Reference Manual. Rather than republish the list here, you can find it in this gist. I have this file stored in "$HOME"/scheme_completion.txt
+
+`rlwrap -r -c -f "$HOME"/scheme_completion.txt scheme`
+
+
+
+
+## Installing rlwrap
 https://rayhightower.com/blog/2015/03/19/using-rlwrap-with-mit-scheme-repl/
 
 

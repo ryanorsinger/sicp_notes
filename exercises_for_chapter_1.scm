@@ -12,8 +12,12 @@
         ((< b a c) (+ (* a a) (* c c)))
         ((< b c a) (+ (* a a) (* c c)))))
 
-; 1.3 another way
-
+; 1.3 solves another way
+(define (two-largest a b c)
+    (cond
+        ((or (< a b c) (< a b c)) (list b c))
+        ((or (< b a c) (< b c a)) (list a c))
+        ((or (< c a b) (< c b a)) (list a b))))
 
 ;1.4
 (define (a-plus-abs-b a b)
@@ -32,3 +36,17 @@
     (cond 
         ((> a 0) (add a))
         (else (square a))))
+
+; Alyssa P. Hacker wants to build an "if" that's not a special form.
+; Why can't I just define "if" as an ordinary procedure in terms of "cond"?
+(define (new-if predicate then-clause else-clause)
+    (cond (predicate then-clause)
+        (else else-clause)))
+
+; The following implementation using new-if is problematic, maximum recursion depth exceeded
+; ;Aborting!: maximum recursion depth exceeded
+(define (sqrt-iter guess x)
+    (new-if (good-enough? guess x )
+        guess
+        (sqrt-iter (improve guess x)
+        x)))
